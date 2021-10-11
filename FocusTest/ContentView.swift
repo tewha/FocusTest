@@ -16,10 +16,6 @@ struct ContentView: View {
             VStack (alignment: .leading, spacing: 10) {
                 Text("We're going to try to focus on this field.")
                 TextField("Name", text: $name)
-                    .font(.headline)
-                    .textFieldStyle(.roundedBorder)
-                    .keyboardType(.emailAddress)
-                    .textInputAutocapitalization(.never)
                     .focused($isNameFocused)
                     .onAppear {
                         self.isNameFocused = true
